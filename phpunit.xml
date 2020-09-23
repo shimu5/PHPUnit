@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="vendor/autoload.php">
+  <testsuites>
+    <testsuite name="fixures">
+      <directory>tests/Fixures</directory>
+    </testsuite>
+  </testsuites>
+  <testsuites>
+    <testsuite name="Errors">
+      <directory>tests/Errors_warnings</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

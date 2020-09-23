@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<tests>
+ <testCaseClass name="DataTest">
+  <testCaseMethod name="testAdd" groups="default" dataSet="#0"/>
+  <testCaseMethod name="testAdd" groups="default" dataSet="#1"/>
+  <testCaseMethod name="testAdd" groups="default" dataSet="#2"/>
+  <testCaseMethod name="testAdd" groups="default" dataSet="#3"/>
+ </testCaseClass>
+ <testCaseClass name="DataProvider\DependencyAndDataProviderComboTest">
+  <testCaseMethod name="testProducerFirst" groups="default"/>
+  <testCaseMethod name="testProducerSecond" groups="default"/>
+  <testCaseMethod name="testConsumer" groups="default" dataSet="#0"/>
+  <testCaseMethod name="testConsumer" groups="default" dataSet="#1"/>
+ </testCaseClass>
+ <testCaseClass name="EmailTest">
+  <testCaseMethod name="testCanBeCreatedFromValidEmailAddress" groups="default"/>
+  <testCaseMethod name="testCannotBeCreatedFromInvalidEmailAddress" groups="default"/>
+  <testCaseMethod name="testCanBeUsedAsString" groups="default"/>
+ </testCaseClass>
+ <testCaseClass name="Errors_warnings\ArrayDiffTest">
+  <testCaseMethod name="testEquality" groups="default"/>
+ </testCaseClass>
+ <testCaseClass name="Errors_warnings\ArrayWeakComparisonTest">
+  <testCaseMethod name="testEquality" groups="default"/>
+ </testCaseClass>
+ <testCaseClass name="Errors_warnings\ErrorSuppressionTest">
+  <testCaseMethod name="testFileWriting" groups="default"/>
+ </testCaseClass>
+ <testCaseClass name="Errors_warnings\ErrorTest">
+  <testCaseMethod name="testDeprecationCanBeExpected" groups="default"/>
+  <testCaseMethod name="testNoticeCanBeExpected" groups="default"/>
+  <testCaseMethod name="testWarningCanBeExpected" groups="default"/>
+  <testCaseMethod name="testErrorCanBeExpected" groups="default"/>
+ </testCaseClass>
+ <testCaseClass name="Errors_warnings\OutputTest">
+  <testCaseMethod name="testExpectFooActualFoo" groups="default"/>
+  <testCaseMethod name="testExpectBarActualBaz" groups="default"/>
+ </testCaseClass>
+ <testCaseClass name="TestDependecies\DependencyFailureTest">
+  <testCaseMethod name="testOne" groups="default"/>
+  <testCaseMethod name="testTwo" groups="default"/>
+ </testCaseClass>
+ <testCaseClass name="TestDependecies\MultipleDependenciesTest">
+  <testCaseMethod name="testProducerFirst" groups="default"/>
+  <testCaseMethod name="testProducerSecond" groups="default"/>
+  <testCaseMethod name="testConsumer" groups="default"/>
+ </testCaseClass>
+ <testCaseClass name="StackTest">
+  <testCaseMethod name="testEmpty" groups="default"/>
+  <testCaseMethod name="testPush" groups="default"/>
+  <testCaseMethod name="testPop" groups="default"/>
+ </testCaseClass>
+</tests>
