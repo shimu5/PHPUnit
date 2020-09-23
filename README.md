@@ -1,7 +1,7 @@
 # PHPUnit
-Unit Test: Test a specific function or a class, We use stubing or mocking , For mocking we can use mockery Framework.
-Integration test:  Just like unit test, Except it uses the real database connection.
-Functional Test: Write a test to programmatically command a browser.
+* Unit Test: Test a specific function or a class, We use stubing or mocking , For mocking we can use mockery Framework.
+* Integration test:  Just like unit test, Except it uses the real database connection.
+* Functional Test: Write a test to programmatically command a browser.
 
 Symfony Testing link: 
 https://symfony.com/doc/current/testing.html
@@ -22,11 +22,11 @@ And then run command :
 C:\xampp\htdocs\PHPUnitTest> composer require --dev phpunit/phpunit ^9
 
 Then create folder "src" and "tests"
-
+```
 C:\xampp\htdocs\PHPUnitTest>  vendor\bin\phpunit --version
 C:\xampp\htdocs\PHPUnitTest>  vendor\bin\phpunit tests
 C:\xampp\htdocs\PHPUnitTest>  vendor\bin\phpunit --verbose tests\TestDependecies\DependencyFailureTest.php
-
+```
 ###### Write all available tests on xml format:
 C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit --verbose  tests  --list-tests-xml shamima.xml
 Command-Line Options
@@ -50,7 +50,8 @@ PHPUnit supports sharing the setup code. Before a test method is run, a template
 There are few good reasons to share fixtures between tests, but in most cases the need to share a fixture between tests stems from an unresolved design problem.
 A good example of a fixture that makes sense to share across several tests is a database connection: you log into the database once and reuse the database connection instead of creating a new connection for each test. This makes your tests run faster.
 Example 4.3 uses the setUpBeforeClass() and tearDownAfterClass() template methods to connect to the database before the test case class’ first test and to disconnect from the database after the last test of the test case, respectively.
-/* 
+
+```
 use PHPUnit\Framework\TestCase;
 class DatabaseTest extends TestCase
 {
@@ -65,7 +66,7 @@ public static function tearDownAfterClass(): void
     }
 }
 From <https://phpunit.readthedocs.io/en/9.3/fixtures.html> 
-*/
+```
 We can follow these 2 githhub links to know more about the bergmann PHPUnit Tests:
 https://github.com/moneyphp/money
 https://github.com/sebastianbergmann/money/
@@ -75,7 +76,7 @@ Creating Testsuite by phpunit.xml file
 
 And run code depend on the test-suite name
 C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit  --testsuite fixures
-/*
+```
 <phpunit bootstrap="src/autoload.php">
   <testsuites>
     <testsuite name="money">
@@ -85,10 +86,9 @@ C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit  --testsuite fixures
     </testsuite>
   </testsuites>
 </phpunit>
+```
+From * [PHPUnit](<https://phpunit.readthedocs.io/en/9.3/organizing-tests.html#organizing-tests-xml-configuration-examples-phpunit-xml>)
 
-From <https://phpunit.readthedocs.io/en/9.3/organizing-tests.html#organizing-tests-xml-configuration-examples-phpunit-xml> 
-
-*/
 
 ### Test Doubles
 When we are writing a test in which we cannot (or chose not to) use a real depended-on component (DOC), we can replace it with a Test Double. The Test Double doesn’t have to behave exactly like the real DOC; it merely has to provide the same API as the real one so that the SUT thinks it is the real one!
