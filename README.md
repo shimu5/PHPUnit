@@ -19,7 +19,7 @@ PHPUnit Setup for windows:
 First install composer, Then Create a project directory "PHPUnitTest"
 And create a composer.json file.
 And then run command :
-C:\xampp\htdocs\PHPUnitTest> composer require --dev phpunit/phpunit ^9
+`C:\xampp\htdocs\PHPUnitTest> composer require --dev phpunit/phpunit ^9`
 
 Then create folder "src" and "tests"
 ```
@@ -38,7 +38,7 @@ C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit --verbose  tests\TestDependecies\
 
 TestDox
 PHPUnit’s TestDox functionality looks at a test class and all the test method names and converts them from camel case (or snake_case) PHP names to sentences: testBalanceIsInitiallyZero() (or test_balance_is_initially_zero() becomes “Balance is initially zero”. 
-C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit  -testdox --testsuite Errors
+`C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit  -testdox --testsuite Errors`
 
 From <https://phpunit.readthedocs.io/en/9.3/textui.html> 
 
@@ -49,7 +49,7 @@ PHPUnit supports sharing the setup code. Before a test method is run, a template
 ### Sharing Fixture
 There are few good reasons to share fixtures between tests, but in most cases the need to share a fixture between tests stems from an unresolved design problem.
 A good example of a fixture that makes sense to share across several tests is a database connection: you log into the database once and reuse the database connection instead of creating a new connection for each test. This makes your tests run faster.
-Example 4.3 uses the setUpBeforeClass() and tearDownAfterClass() template methods to connect to the database before the test case class’ first test and to disconnect from the database after the last test of the test case, respectively.
+Example 4.3 uses the ``setUpBeforeClass()` and `tearDownAfterClass` template methods to connect to the database before the test case class’ first test and to disconnect from the database after the last test of the test case, respectively.
 
 ```
 use PHPUnit\Framework\TestCase;
