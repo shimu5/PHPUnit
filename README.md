@@ -15,7 +15,7 @@ From <https://github.com/sebastianbergmann>
 PHPunit Docs:
 https://phpunit.readthedocs.io/en/9.3/configuration.html
 
-PHPUnit Setup for windows:
+### PHPUnit Setup for windows:
 First install composer, Then Create a project directory "PHPUnitTest"
 And create a composer.json file.
 And then run command :
@@ -27,17 +27,17 @@ C:\xampp\htdocs\PHPUnitTest>  vendor\bin\phpunit --version
 C:\xampp\htdocs\PHPUnitTest>  vendor\bin\phpunit tests
 C:\xampp\htdocs\PHPUnitTest>  vendor\bin\phpunit --verbose tests\TestDependecies\DependencyFailureTest.php
 ```
-###### Write all available tests on xml format:
-C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit --verbose  tests  --list-tests-xml shamima.xml
+##### Write all available tests on xml format:
+`C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit --verbose  tests  --list-tests-xml shamima.xml`
 Command-Line Options
 Let’s take a look at the command-line test runner’s options in the following code
 From <https://phpunit.readthedocs.io/en/9.3/textui.html> 
 
-Use test result in colors:
-C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit --verbose  tests\TestDependecies\DependencyFailureTest.php --colors always
+##### Use test result in colors:
+`C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit --verbose  tests\TestDependecies\DependencyFailureTest.php --colors always`
 
 TestDox
-PHPUnit’s TestDox functionality looks at a test class and all the test method names and converts them from camel case (or snake_case) PHP names to sentences: testBalanceIsInitiallyZero() (or test_balance_is_initially_zero() becomes “Balance is initially zero”. 
+PHPUnit’s TestDox functionality looks at a test class and all the test method names and converts them from camel case (or snake_case) PHP names to sentences: `testBalanceIsInitiallyZero()` (or test_balance_is_initially_zero() becomes “Balance is initially zero”. 
 `C:\xampp\htdocs\PHPUnitTest>vendor\bin\phpunit  -testdox --testsuite Errors`
 
 From <https://phpunit.readthedocs.io/en/9.3/textui.html> 
@@ -71,7 +71,7 @@ We can follow these 2 githhub links to know more about the bergmann PHPUnit Test
 https://github.com/moneyphp/money
 https://github.com/sebastianbergmann/money/
 
-Organizing Tests:
+## Organizing Tests:
 Creating Testsuite by phpunit.xml file
 
 And run code depend on the test-suite name
